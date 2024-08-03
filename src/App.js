@@ -5,12 +5,17 @@ import Home from "./Components/Landing";
 import Products from "./Components/Products";
 import Cart from "./Components/Cart";
 import RegisterPage from "./Components/RegisterPage";
+import LoginPage from "./Components/LoginPage";
 
 const App = () => {
   const navigate = useNavigate();
 
   const handleRegisterClick = () => {
     navigate("/register");
+  };
+
+  const handleLoginClick = () => {
+    navigate("/login");
   };
   return (
     // nav bar
@@ -39,6 +44,9 @@ const App = () => {
           <button className="RegisterBtn" onClick={handleRegisterClick}>
             <b>Register</b>
           </button>
+          <button className="LoginBtn" onClick={handleLoginClick}>
+            <b>Login</b>
+          </button>
         </div>
       </div>
       <div className="content">
@@ -47,6 +55,7 @@ const App = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
     </div>
