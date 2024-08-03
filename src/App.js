@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Landing";
 import Products from "./Components/Products";
@@ -7,7 +13,8 @@ import Cart from "./Components/Cart";
 import RegisterPage from "./Components/RegisterPage";
 import LoginPage from "./Components/LoginPage";
 import Help from "./Components/Help";
-import Figure from "react-bootstrap/Figure";
+import TotalPrice from "./Components/TotalPrice";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   const navigate = useNavigate();
@@ -21,6 +28,20 @@ const App = () => {
   };
 
   const [showPopup, setShowPopup] = useState(false);
+
+  //totalPrice box
+  const location = useLocation();
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [purchasedProducts, setPurchasedProducts] = useState([]);
+  const [isTotalPriceVisible, setIsTotalPriceVisible] = useState(false);
+
+  const handleBuy = (product) => {
+    const price = parseFloat(product.Price.replace("£", ""));
+    const newTotalPrice = totalPrice + price;
+    setTotalPrice(newTotalPrice);
+    setPurchasedProducts([...purchasedProducts, product]);
+    setIsTotalPriceVisible(true);
+  };
 
   return (
     // nav bar
@@ -54,10 +75,16 @@ const App = () => {
           </button>
         </div>
       </div>
+      {location.pathname !== "/" && (
+        <TotalPrice totalPrice={totalPrice} isVisible={isTotalPriceVisible} />
+      )}{" "}
       <div className="content">
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/products" element={<Products />} />
+          <Route
+            path="/products"
+            element={<Products handleBuy={handleBuy} />}
+          />
           <Route path="/cart" element={<Cart />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
@@ -65,7 +92,7 @@ const App = () => {
       </div>
       {/*Help button*/}
       <button onClick={() => setShowPopup(true)} className="info-btn">
-        Support
+        <b>Support</b>
       </button>
       <Help
         className="helpPopup"
