@@ -6,7 +6,7 @@ function Header({ username, isLoggedIn }) {
       {isLoggedIn && (
         <>
           <h1>Welcome {username}</h1>
-          <p>Signed in as {username}</p>
+          <p className="loginP">Signed in as {username}</p>
         </>
       )}
     </header>
