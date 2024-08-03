@@ -35,7 +35,17 @@ nav ul li {
 
 .RegisterBtn {
   position: fixed;
-  right: 2cm;
+  right: 2.5cm;
+  top: 30px;
+  color: #4863a0;
+  font-size: medium;
+  background-color: #f7f4ed;
+  border: none;
+}
+
+.LoginBtn {
+  position: fixed;
+  right: 1cm;
   top: 30px;
   color: #4863a0;
   font-size: medium;
@@ -82,6 +92,34 @@ nav ul li {
   margin-left: 7.5cm;
 }
 
-.RegisterWelcome {
+/*Login.js*/
+.userInput,
+.welcome,
+h2 {
+  padding-left: 2cm;
+  padding-right: 60px;
+  padding-top: 30px;
+}
+
+.label {
+  padding-right: 20px;
+  color: #4863a0;
+}
+
+.headerUser {
+  padding-left: 70px;
+}
+
+p {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: small;
+  color: #4863a0;
+}
+
+/*LoginPage/RegisterPage*/
+.RegisterWelcome,
+.LoginWelcome {
   padding-left: 70px;
 }
