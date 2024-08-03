@@ -4,8 +4,8 @@ body {
 
 /*Navbar*/
 nav {
-  padding-top: 13px;
-  padding-bottom: 5px;
+  padding-top: 25px;
+  padding-bottom: 15px;
   text-align: center;
   background-color: #f7f4ed;
 }
@@ -35,22 +35,29 @@ nav ul li {
 
 .RegisterBtn {
   position: fixed;
-  right: 2.5cm;
-  top: 30px;
+  right: 2cm;
+  top: 23px;
   color: #4863a0;
   font-size: medium;
   background-color: #f7f4ed;
   border: none;
+  border-radius: 8px;
+}
+
+.RegisterBtn:hover,
+.LoginBtn:hover {
+  color: black;
 }
 
 .LoginBtn {
   position: fixed;
-  right: 1cm;
-  top: 30px;
+  right: 0.5cm;
+  top: 23px;
   color: #4863a0;
   font-size: medium;
   background-color: #f7f4ed;
   border: none;
+  border-radius: 8px;
 }
 
 /*Register.js*/
@@ -110,10 +117,10 @@ h2 {
   padding-left: 70px;
 }
 
-p {
+.loginP {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 50px;
+  right: 23px;
   font-size: small;
   color: #4863a0;
 }
@@ -139,26 +146,16 @@ p {
   font-family: "Courier New", Courier, monospace;
 }
 
-.Store {
-  padding-left: 8cm;
-  padding-right: 3cm;
-  padding-top: 2cm;
-  width: 50%;
-}
-
-.contactus {
-  padding-left: 0cm;
-}
-
 /* Help */
 
 .info-btn {
   position: fixed;
-  top: 35px;
-  left: 20px;
+  top: 25px;
+  left: 43px;
   background-color: #f7f4ed;
   border: 1px solid #f7f4ed;
   color: #4863a0;
+  border-radius: 8px;
 }
 
 .info-btn:hover {
