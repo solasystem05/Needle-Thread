@@ -1,0 +1,87 @@
+body {
+  background-color: #f7f4ed;
+}
+
+/*Navbar*/
+nav {
+  padding-top: 13px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #f7f4ed;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.topnav a {
+  text-decoration: none;
+  color: #4863a0;
+  padding: 7px;
+}
+
+.topnav a:hover {
+  background-color: #efece3d8;
+}
+
+.topnav {
+  padding-bottom: 20px;
+}
+
+.RegisterBtn {
+  position: fixed;
+  right: 2cm;
+  top: 30px;
+  color: #4863a0;
+  font-size: medium;
+  background-color: #f7f4ed;
+  border: none;
+}
+
+/*Register.js*/
+.nameLabel,
+.surnameLabel,
+.emailLabel,
+.passLabel,
+.confirmLabel {
+  padding-left: 2cm;
+  color: #4863a0;
+}
+
+.register {
+  margin-left: 10px;
+}
+
+.registerName {
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.passLabel {
+  margin-right: 60px;
+}
+
+.emailLabel {
+  margin-right: 30px;
+}
+
+.surnameLabel {
+  margin-right: 65px;
+}
+
+.nameLabel {
+  margin-right: 50px;
+}
+
+.registerSubmit {
+  margin-left: 7.5cm;
+}
+
+.RegisterWelcome {
+  padding-left: 70px;
+}
