@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Landing";
@@ -6,6 +6,7 @@ import Products from "./Components/Products";
 import Cart from "./Components/Cart";
 import RegisterPage from "./Components/RegisterPage";
 import LoginPage from "./Components/LoginPage";
+import Help from "./Components/Help";
 
 const App = () => {
   const navigate = useNavigate();
@@ -17,6 +18,9 @@ const App = () => {
   const handleLoginClick = () => {
     navigate("/login");
   };
+
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
     // nav bar
     <div className="App">
@@ -58,6 +62,24 @@ const App = () => {
           <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
+      {/*Help button*/}
+      <button onClick={() => setShowPopup(true)} className="info-btn">
+        Support
+      </button>
+      <Help
+        className="helpPopup"
+        show={showPopup}
+        onClose={() => setShowPopup(false)}
+      >
+        <h2> Shipping Options</h2>
+        <ul>
+          <li>Standard Delivery: £3.99 (3-5 working days)</li>
+          <li>Express Delivery: £5.99 (2-3 working days)</li>
+          <li>Next Day Delivery: £7.99 (Order before 1pm)</li>
+          <br />
+          <li>Working Days: Mon-Fri (8am-6pm)</li>
+        </ul>
+      </Help>
     </div>
   );
 };
