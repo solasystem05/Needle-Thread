@@ -7,6 +7,7 @@ import Cart from "./Components/Cart";
 import RegisterPage from "./Components/RegisterPage";
 import LoginPage from "./Components/LoginPage";
 import Help from "./Components/Help";
+import Figure from "react-bootstrap/Figure";
 
 const App = () => {
   const navigate = useNavigate();
@@ -71,12 +72,15 @@ const App = () => {
         show={showPopup}
         onClose={() => setShowPopup(false)}
       >
-        <h2> Shipping Options</h2>
+        <h2>Shipping Options</h2>
         <ul>
           <li>Standard Delivery: £3.99 (3-5 working days)</li>
           <li>Express Delivery: £5.99 (2-3 working days)</li>
           <li>Next Day Delivery: £7.99 (Order before 1pm)</li>
-          <br />
+
+          <h2>Contact Us!</h2>
+          <li>Email : enquiries@needleandthread.com</li>
+          <li>Phone : 07396194295 </li>
           <li>Working Days: Mon-Fri (8am-6pm)</li>
         </ul>
       </Help>
