@@ -21,12 +21,6 @@ function About() {
           Needle & Thread.
           <br /> Happy shopping!
         </Figure.Caption>
-        <Figure.Caption className="contact">
-          <h2 className="contactus">Contact Us!</h2>
-          Email : enquiries@needleandthread.com <br />
-          Phone : 07396194295 <br />
-          Working hours : Mon - Fri 8:00 - 17:00
-        </Figure.Caption>
       </Figure>
     </div>
   );
