@@ -123,3 +123,29 @@ p {
 .LoginWelcome {
   padding-left: 70px;
 }
+
+/*Landing.js*/
+.Logo {
+  width: 30%;
+  padding-left: 2cm;
+  padding-top: 60px;
+}
+
+.store-description,
+.contact {
+  padding-left: 2cm;
+  padding-top: 1cm;
+  padding-right: 5cm;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.Store {
+  padding-left: 8cm;
+  padding-right: 3cm;
+  padding-top: 2cm;
+  width: 50%;
+}
+
+.contactus {
+  padding-left: 0cm;
+}
