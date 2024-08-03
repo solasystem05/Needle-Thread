@@ -53,7 +53,7 @@ const Register = () => {
         type="firstName"
         onChange={formik.handleChange}
         value={formik.values.firstName}
-        maxlength={15}
+        maxLength={15}
         required
       />
       <br />
@@ -69,7 +69,7 @@ const Register = () => {
         type="surname"
         onChange={formik.handleChange}
         value={formik.values.surname}
-        maxlength={20}
+        maxLength={20}
         required
       />
       <br />
