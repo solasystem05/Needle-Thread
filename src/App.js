@@ -5,6 +5,7 @@ import {
   Link,
   useNavigate,
   useLocation,
+  Router,
 } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Landing";
@@ -15,6 +16,7 @@ import LoginPage from "./Components/LoginPage";
 import Help from "./Components/Help";
 import TotalPrice from "./Components/TotalPrice";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useSelector } from "react-redux";
 
 const App = () => {
   const navigate = useNavigate();
@@ -30,18 +32,8 @@ const App = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   //totalPrice box
+  const { totalPrice, isTotalPriceVisible } = useSelector((state) => state);
   const location = useLocation();
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [purchasedProducts, setPurchasedProducts] = useState([]);
-  const [isTotalPriceVisible, setIsTotalPriceVisible] = useState(false);
-
-  const handleBuy = (product) => {
-    const price = parseFloat(product.Price.replace("£", ""));
-    const newTotalPrice = totalPrice + price;
-    setTotalPrice(newTotalPrice);
-    setPurchasedProducts([...purchasedProducts, product]);
-    setIsTotalPriceVisible(true);
-  };
 
   return (
     // nav bar
@@ -75,16 +67,15 @@ const App = () => {
           </button>
         </div>
       </div>
+
       {location.pathname !== "/" && (
         <TotalPrice totalPrice={totalPrice} isVisible={isTotalPriceVisible} />
-      )}{" "}
+      )}
+
       <div className="content">
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route
-            path="/products"
-            element={<Products handleBuy={handleBuy} />}
-          />
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
