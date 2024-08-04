@@ -11,8 +11,12 @@ import product6Image from "../Images/product6.png";
 import product7Image from "../Images/product7.png";
 import product8Image from "../Images/product8.png";
 import product9Image from "../Images/product9.png";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../store/actions";
 
-function Products({ handleBuy }) {
+function Products() {
+  const dispatch = useDispatch();
+
   const products = [
     {
       productNo: 1,
@@ -88,7 +92,12 @@ function Products({ handleBuy }) {
     },
   ];
 
-  const ProductCard = ({ product, handleBuy }) => {
+  const handleBuy = (product) => {
+    const price = parseFloat(product.Price.replace("£", ""));
+    dispatch(addProduct({ ...product, price }));
+  };
+
+  const ProductCard = ({ product }) => {
     const [selectedColor, setSelectedColor] = useState("Color");
 
     const handleColorSelect = (color) => {
@@ -169,11 +178,7 @@ function Products({ handleBuy }) {
         style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
       >
         {products.map((product) => (
-          <ProductCard
-            key={product.productNo}
-            product={product}
-            handleBuy={handleBuy}
-          />
+          <ProductCard key={product.productNo} product={product} />
         ))}
       </div>
     </div>
