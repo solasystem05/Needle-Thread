@@ -2,7 +2,7 @@ import React from "react";
 
 const TotalPrice = ({ totalPrice, isVisible }) => {
   return (
-    //box to stay in top right
+    //box to stay in bottom right
     <div
       style={{
         display: isVisible ? "flex" : "none",
