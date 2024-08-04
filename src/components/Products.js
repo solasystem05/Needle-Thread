@@ -16,7 +16,7 @@ function Products({ handleBuy }) {
   const products = [
     {
       productNo: 1,
-      productName: "HIGH NECK SOLID KNITTED LONG SLEEVE CROP SWEATER",
+      name: "HIGH NECK SOLID KNITTED LONG SLEEVE CROP SWEATER",
       Description1: "Stretch: High",
       Description2: "Material: Knit Fabric",
       Price: "£22.00",
@@ -24,7 +24,7 @@ function Products({ handleBuy }) {
     },
     {
       productNo: 2,
-      productName: "SOLID JERSEY HIGH WAIST RUFFLE WIDE LEG TROUSERS",
+      name: "SOLID JERSEY HIGH WAIST RUFFLE WIDE LEG TROUSERS",
       Description1: "Stretch: High",
       Description2: "Material: Jersey",
       Price: "£12.90",
@@ -32,7 +32,7 @@ function Products({ handleBuy }) {
     },
     {
       productNo: 3,
-      productName: "V-NECK SOLID SPLIT MIDI DRESS",
+      name: "V-NECK SOLID SPLIT MIDI DRESS",
       Description1: "Stretch: Slight",
       Description2: "Material: Woven",
       Price: "£37.90",
@@ -40,7 +40,7 @@ function Products({ handleBuy }) {
     },
     {
       productNo: 4,
-      productName: "DRAWSTRING POCKET WIDE LEG CARGO SWEATPANTS",
+      name: "DRAWSTRING POCKET WIDE LEG CARGO SWEATPANTS",
       Description1: "Stretch: Medium",
       Description2: "Material: Terry",
       Price: "£28.90",
@@ -48,7 +48,7 @@ function Products({ handleBuy }) {
     },
     {
       productNo: 5,
-      productName: "BOW DECOR SQUARE TOE BALLET MARY JANE FLATS",
+      name: "BOW DECOR SQUARE TOE BALLET MARY JANE FLATS",
       Description1: "Upper Material: Faux Leather",
       Description2: "Lining Material: Faux Leather,Polyester",
       Price: "£18.00",
@@ -56,7 +56,7 @@ function Products({ handleBuy }) {
     },
     {
       productNo: 6,
-      productName: "WINTER WARM SHAWL",
+      name: "WINTER WARM SHAWL",
       Description1: "Material: Polyester",
       Description2: "",
       Price: "£15.90",
@@ -64,7 +64,7 @@ function Products({ handleBuy }) {
     },
     {
       productNo: 7,
-      productName: "HIGH RISE KNOTTED POCKET WIDE LEG TROUSERS",
+      name: "HIGH RISE KNOTTED POCKET WIDE LEG TROUSERS",
       Description1: "Stretch: Non",
       Description2: "Material: Woven",
       Price: "£25.00",
@@ -72,7 +72,7 @@ function Products({ handleBuy }) {
     },
     {
       productNo: 8,
-      productName: "HIGH WAIST SOLID PLEATED MAXI SKIRT",
+      name: "HIGH WAIST SOLID PLEATED MAXI SKIRT",
       Description1: "Stretch: Non",
       Description2: "Material: Woven",
       Price: "£14.00",
@@ -80,7 +80,7 @@ function Products({ handleBuy }) {
     },
     {
       productNo: 9,
-      productName: "SOLID KNIT POLO ZIPPER CARDIGAN",
+      name: "SOLID KNIT POLO ZIPPER CARDIGAN",
       Description1: "Stretch: High",
       Description2: "Material: Knit Fabric",
       Price: "£17.90",
@@ -103,7 +103,7 @@ function Products({ handleBuy }) {
           <Card.Img
             variant="top"
             src={product.Image}
-            alt={product.productName}
+            alt={product.name}
             style={{
               width: "7cm",
               height: "9cm",
@@ -113,7 +113,7 @@ function Products({ handleBuy }) {
           />
         )}
         <Card.Body>
-          <Card.Title>{product.productName}</Card.Title>
+          <Card.Title>{product.name}</Card.Title>
           <Card.Text>
             {product.Description1} <br />
             {product.Description2} <br /> <br />
