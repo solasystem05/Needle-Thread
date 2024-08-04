@@ -5,7 +5,6 @@ import {
   Link,
   useNavigate,
   useLocation,
-  Router,
 } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Landing";
@@ -21,6 +20,7 @@ import { useSelector } from "react-redux";
 const App = () => {
   const navigate = useNavigate();
 
+  //Register and Login Button Functions
   const handleRegisterClick = () => {
     navigate("/register");
   };
@@ -29,9 +29,10 @@ const App = () => {
     navigate("/login");
   };
 
+  //Help Button Function
   const [showPopup, setShowPopup] = useState(false);
 
-  //totalPrice box
+  //TotalPrice box
   const { totalPrice, isTotalPriceVisible } = useSelector((state) => state);
   const location = useLocation();
 
@@ -90,6 +91,7 @@ const App = () => {
         show={showPopup}
         onClose={() => setShowPopup(false)}
       >
+        {/*Help/Support Popup*/}
         <h2>Shipping Options</h2>
         <ul>
           <li>Standard Delivery: £3.99 (3-5 working days)</li>
