@@ -199,3 +199,21 @@ h2 {
 .popup-close:hover {
   color: #ff0000;
 }
+
+/*Cart*/
+.TotalCart {
+  padding-left: 40px;
+  padding-top: 60px;
+}
+
+.cartList {
+  padding-left: 60px;
+  padding-top: 40px;
+}
+
+.CartTitle,
+.CartStatement,
+.ShipmentOptions {
+  padding-left: 40px;
+  padding-top: 40px;
+}
