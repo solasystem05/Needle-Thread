@@ -17,9 +17,8 @@ const TotalPrice = ({ totalPrice, isVisible }) => {
         zIndex: 1000, //overlap
       }}
     >
-      <p className="totalbox">Total price: £{totalPrice.toFixed(2)}</p>
+      <p className="totalbox">Total Price: £{totalPrice.toFixed(2)}</p>
     </div>
   );
 };
-
 export default TotalPrice;
